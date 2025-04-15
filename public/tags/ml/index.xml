@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ML on Vicki Ye&#39;s Blog</title>
+        <link>http://localhost:1313/tags/ml/</link>
+        <description>Recent content in ML on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ml/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MBTI Classification</title>
+        <link>http://localhost:1313/p/mbti-classification/</link>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/mbti-classification/</guid>
+        <description>&lt;img src="http://localhost:1313/mbtiprediction.jpg" alt="Featured image of post MBTI Classification" /&gt;&lt;h1 id=&#34;-mbti-personality-prediction-project&#34;&gt;🧠 MBTI Personality Prediction Project
+&lt;/h1&gt;&lt;p&gt;This project was developed as part of the course &lt;strong&gt;CIS 413: Practical Data Science Using Machine Learning&lt;/strong&gt;, with the goal of &lt;strong&gt;automating MBTI personality type predictions&lt;/strong&gt; using user-generated text.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-statement&#34;&gt;🔍 Problem Statement
+&lt;/h2&gt;&lt;p&gt;Traditional MBTI personality assessments rely on &lt;strong&gt;self-reports&lt;/strong&gt;, which can be subjective and biased.&lt;br&gt;
+&lt;strong&gt;Goal&lt;/strong&gt;: Predict personality types based on text data, offering a scalable and objective solution for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recruitment &amp;amp; candidate-job fit&lt;/li&gt;
+&lt;li&gt;Personalized recommendations&lt;/li&gt;
+&lt;li&gt;Mental health applications&lt;/li&gt;
+&lt;li&gt;Ad targeting &amp;amp; behavioral analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-workflow&#34;&gt;🛠️ Workflow
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1. Data Cleaning&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tokenization&lt;/li&gt;
+&lt;li&gt;Removal of URLs, special characters, stopwords&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Feature Engineering&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Traditional: TF-IDF&lt;/li&gt;
+&lt;li&gt;Deep Learning: Token Embeddings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Model Training&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compared Logistic Regression, Random Forest, and GRU (deep learning)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Evaluation Metrics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accuracy, Precision, F1-score&lt;/li&gt;
+&lt;li&gt;Stratified train/test split to reduce class imbalance impact&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;5. Deployment Consideration&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;API-based prediction system for scalable real-time usage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-models--performance&#34;&gt;🧪 Models &amp;amp; Performance
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Model&lt;/th&gt;
+          &lt;th&gt;Accuracy&lt;/th&gt;
+          &lt;th&gt;Precision&lt;/th&gt;
+          &lt;th&gt;F1-score&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Logistic Regression&lt;/td&gt;
+          &lt;td&gt;0.6406&lt;/td&gt;
+          &lt;td&gt;0.66&lt;/td&gt;
+          &lt;td&gt;0.64&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Random Forest&lt;/td&gt;
+          &lt;td&gt;0.6083&lt;/td&gt;
+          &lt;td&gt;0.64&lt;/td&gt;
+          &lt;td&gt;0.59&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;GRU (Deep Learning)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.6486&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.7974&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;N/A&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Logistic Regression&lt;/strong&gt;: Fast, interpretable, but weak in semantic nuance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Forest&lt;/strong&gt;: Great for short-texts and robust to overfitting&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GRU&lt;/strong&gt;: Best for long-form text like Reddit posts and job applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-insights&#34;&gt;📈 Insights
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GRU provided the best accuracy and is suited for real-world, high-stakes predictions&lt;/li&gt;
+&lt;li&gt;Logistic Regression still performs well in constrained environments&lt;/li&gt;
+&lt;li&gt;Wordcloud visualizations helped illustrate key lexical differences between personality types&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-future-improvements&#34;&gt;🔄 Future Improvements
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;📊 Add more data, especially underrepresented MBTI types (e.g., INFJ)&lt;/li&gt;
+&lt;li&gt;🤖 Try BERT/RoBERTa for better context modeling&lt;/li&gt;
+&lt;li&gt;⚖️ Use SMOTE to balance class distribution&lt;/li&gt;
+&lt;li&gt;🧩 Incorporate user metadata (likes, shares, activity patterns)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-business-impact&#34;&gt;💼 Business Impact
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Scalable pipeline to support AI-driven hiring platforms&lt;/li&gt;
+&lt;li&gt;Enables real-time personalization for apps &amp;amp; services&lt;/li&gt;
+&lt;li&gt;Bridges psychology and machine learning in a production-ready format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;📎 &lt;strong&gt;PDF Slide Deck&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;MBTI_Classification_VickiYE.pdf&#34; &gt;MBTI Classification Report&lt;/a&gt;&lt;br&gt;
+💻 &lt;strong&gt;Code Repository&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;VickiYE_mbtiprediction.ipynb&#34; &gt;MBTI Classification Code&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

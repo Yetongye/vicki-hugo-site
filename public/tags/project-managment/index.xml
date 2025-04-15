@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Project Managment on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/tags/project-managment/</link>
+        <description>Recent content in Project Managment on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/tags/project-managment/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>FPD Metrics Dashboard Project Management Plan</title>
+        <link>https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/</link>
+        <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/</guid>
+        <description>&lt;img src="https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm1.png" alt="Featured image of post FPD Metrics Dashboard Project Management Plan" /&gt;&lt;h2 id=&#34;project-summary&#34;&gt;Project Summary
+&lt;/h2&gt;&lt;p&gt;FPD Beverage Company suffers from outdated, disconnected systems causing poor forecasting and customer dissatisfaction. This project proposes building a &lt;strong&gt;QlikSense-based real-time analytics dashboard&lt;/strong&gt; to enhance decision-making, improve delivery, and protect $350M in annual revenue.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Budget&lt;/strong&gt;: $250,000 (plus 10% contingency)&lt;br&gt;
+&lt;strong&gt;Timeline&lt;/strong&gt;: July 1 – Dec 31 (6 months)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;project-scope--objectives&#34;&gt;Project Scope &amp;amp; Objectives
+&lt;/h2&gt;&lt;h3 id=&#34;objective&#34;&gt;Objective
+&lt;/h3&gt;&lt;p&gt;Develop a secure, real-time dashboard using &lt;strong&gt;QlikSense AI tools&lt;/strong&gt; to visualize:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Product sales&lt;/li&gt;
+&lt;li&gt;Packaging performance&lt;/li&gt;
+&lt;li&gt;Delivery metrics by customer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;deliverables&#34;&gt;Deliverables
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Cloud dashboard (mobile/desktop)&lt;/li&gt;
+&lt;li&gt;AI-driven analytics integration&lt;/li&gt;
+&lt;li&gt;User training (QlikSense)&lt;/li&gt;
+&lt;li&gt;Technical documentation&lt;/li&gt;
+&lt;li&gt;Risk management and execution plan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;work-breakdown--budget&#34;&gt;Work Breakdown &amp;amp; Budget
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;WBS includes dashboard UI design, data cleansing, analytics model development, and UAT&lt;/li&gt;
+&lt;li&gt;Estimation uses hybrid (top-down + bottom-up) approach&lt;/li&gt;
+&lt;li&gt;Example task:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Build analytics models&lt;/strong&gt;: 219.6 hrs @ $110/hr = $24,156&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Configure Qlik dashboard&lt;/strong&gt;: 274.5 hrs = $32,195&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Total Estimated Cost&lt;/strong&gt;: $249,765&lt;br&gt;
+WBS, Gantt, AON diagrams all align&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;milestones&#34;&gt;Milestones
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Milestone&lt;/th&gt;
+          &lt;th&gt;Due&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Team formation &amp;amp; requirements&lt;/td&gt;
+          &lt;td&gt;07/31&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;QlikSense AI Training&lt;/td&gt;
+          &lt;td&gt;08/31&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Dashboard Design&lt;/td&gt;
+          &lt;td&gt;09/30&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Prototype Ready&lt;/td&gt;
+          &lt;td&gt;10/31&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;User Testing&lt;/td&gt;
+          &lt;td&gt;11/30&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Full Launch&lt;/td&gt;
+          &lt;td&gt;12/31&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm3.png&#34;
+	width=&#34;2046&#34;
+	height=&#34;1032&#34;
+	srcset=&#34;https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm3_hu_97dc64038e4b516.png 480w, https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm3_hu_5049b78c743c5cd9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gantt Chart with milestones&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;communication-strategy&#34;&gt;Communication Strategy
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Audience&lt;/th&gt;
+          &lt;th&gt;Frequency&lt;/th&gt;
+          &lt;th&gt;Channel&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sponsor&lt;/td&gt;
+          &lt;td&gt;Bi-weekly&lt;/td&gt;
+          &lt;td&gt;Reports, Email&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EOC&lt;/td&gt;
+          &lt;td&gt;Monthly&lt;/td&gt;
+          &lt;td&gt;Meetings&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Team&lt;/td&gt;
+          &lt;td&gt;Weekly&lt;/td&gt;
+          &lt;td&gt;Slack, Standups&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;End Users&lt;/td&gt;
+          &lt;td&gt;Monthly&lt;/td&gt;
+          &lt;td&gt;Reports, Feedback Sessions&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm2.png&#34;
+	width=&#34;1546&#34;
+	height=&#34;590&#34;
+	srcset=&#34;https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm2_hu_34847c8ca5b4f1ce.png 480w, https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm2_hu_5dab185aa979b62c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;.Project Organization&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;628px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;risk-management&#34;&gt;Risk Management
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Major Risks&lt;/strong&gt;: Low data quality (R1), ERP integration (R4)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Medium Risks&lt;/strong&gt;: Model accuracy (R5), resource shortages (R2)&lt;/li&gt;
+&lt;li&gt;Mitigations include: fallback data cleaning, cross-functional task force, retraining, and modular AI deployment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Risk rating: &lt;strong&gt;Medium-High&lt;/strong&gt;&lt;br&gt;
+ROI tied to successful integration and model output&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm4.png&#34;
+	width=&#34;1068&#34;
+	height=&#34;964&#34;
+	srcset=&#34;https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm4_hu_82f962e364a41b45.png 480w, https://Yetongye.github.io/p/fpd-metrics-dashboard-project-management-plan/pm4_hu_400db310b303e36e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Risk Assessment Matrix&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;110&#34;
+		data-flex-basis=&#34;265px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;feasibility--success-metrics&#34;&gt;Feasibility &amp;amp; Success Metrics
+&lt;/h2&gt;&lt;p&gt;Project success measured by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On-time, on-budget delivery&lt;/li&gt;
+&lt;li&gt;Accurate, AI-powered dashboards&lt;/li&gt;
+&lt;li&gt;Positive user adoption and stakeholder feedback&lt;/li&gt;
+&lt;li&gt;Reduction in missed shipments &amp;amp; better performance predictability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;responsibility-matrix-raci&#34;&gt;Responsibility Matrix (RACI)
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Task&lt;/th&gt;
+          &lt;th&gt;PM&lt;/th&gt;
+          &lt;th&gt;IT&lt;/th&gt;
+          &lt;th&gt;ERP Analyst&lt;/th&gt;
+          &lt;th&gt;DB Analyst&lt;/th&gt;
+          &lt;th&gt;Supply Chain&lt;/th&gt;
+          &lt;th&gt;Sales&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Requirements&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Dashboard&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Data Prep&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Analytics&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;UAT &amp;amp; Go-Live&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;R&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;📎 &lt;strong&gt;Full Project Plan (PDF)&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;projectplan.pdf&#34; &gt;Download Here&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

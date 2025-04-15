@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>About Me on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/categories/about-me/</link>
+        <description>Recent content in About Me on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/categories/about-me/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About this website &amp; me</title>
+        <link>https://Yetongye.github.io/p/about-this-website-me/</link>
+        <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/p/about-this-website-me/</guid>
+        <description>&lt;img src="https://Yetongye.github.io/p/about-this-website-me/R0000861.JPG" alt="Featured image of post About this website &amp; me" /&gt;&lt;h1 id=&#34;-about-this-website&#34;&gt;👋 About This Website
+&lt;/h1&gt;&lt;p&gt;Welcome! This website is a collection of my &lt;strong&gt;academic journey&lt;/strong&gt;, &lt;strong&gt;technical projects&lt;/strong&gt;, and &lt;strong&gt;professional portfolio&lt;/strong&gt;, built using Hugo as part of my first experience with the &lt;strong&gt;Go programming ecosystem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here, you&amp;rsquo;ll find:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;strong&gt;My Resume&lt;/strong&gt; – highlighting my educational background, skills, and experience&lt;/li&gt;
+&lt;li&gt;💼 &lt;strong&gt;Project Showcases&lt;/strong&gt; – a series of projects from both my undergraduate and graduate studies, covering:
+&lt;ul&gt;
+&lt;li&gt;🧠 Artificial Intelligence (AI)&lt;/li&gt;
+&lt;li&gt;📈 Machine Learning (ML)&lt;/li&gt;
+&lt;li&gt;🗃️ Database Design&lt;/li&gt;
+&lt;li&gt;🤖 RPA Automation&lt;/li&gt;
+&lt;li&gt;📊 Project Management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These projects span industries and applications—from building digital human avatars using deep learning, to automating nonprofit fundraising with machine learning, to designing full-stack rental platforms in PHP and MySQL, and leading cloud analytics dashboard projects with QlikSense and AI.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-skills--tools&#34;&gt;🧰 Skills &amp;amp; Tools
+&lt;/h2&gt;&lt;p&gt;Here are some of the technologies I&amp;rsquo;ve used throughout my work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Languages&lt;/strong&gt;: Python, SQL, PHP, Go, JavaScript, C, C++&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools &amp;amp; Frameworks&lt;/strong&gt;: scikit-learn, Pandas, Flask, Vue.js, Gradio, QlikSense&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Database&lt;/strong&gt;: MySQL, PostgreSQL, phpMyAdmin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Tools&lt;/strong&gt;: Gantt Chart, AON, WBS, Risk Matrix, RACI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-ongoing-development&#34;&gt;🛠️ Ongoing Development
+&lt;/h2&gt;&lt;p&gt;This site is a &lt;strong&gt;work in progress&lt;/strong&gt;. I plan to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🔁 Continuously update with new projects and ideas&lt;/li&gt;
+&lt;li&gt;✍️ Add a blog section with my personal reflections and learning notes&lt;/li&gt;
+&lt;li&gt;📚 Share reading summaries, interview prep, and thoughts on product, tech, and business&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks for visiting — I hope this gives you insight into who I am and what I’m building!&lt;/p&gt;
+&lt;p&gt;— &lt;strong&gt;Vicki&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

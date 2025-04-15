@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>RPA on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/tags/rpa/</link>
+        <description>Recent content in RPA on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/tags/rpa/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ChatRPA</title>
+        <link>https://Yetongye.github.io/p/chatrpa/</link>
+        <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/p/chatrpa/</guid>
+        <description>&lt;img src="https://Yetongye.github.io/p/chatrpa/chatrpa1.png" alt="Featured image of post ChatRPA" /&gt;&lt;h1 id=&#34;-chatrpa-empowering-automation-with-ai--rpa&#34;&gt;🤖 ChatRPA: Empowering Automation with AI + RPA
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-project-overview&#34;&gt;📌 Project Overview
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ChatRPA&lt;/strong&gt; is an intelligent automation assistant that combines the natural language power of &lt;strong&gt;ChatGPT&lt;/strong&gt; with the operational efficiency of &lt;strong&gt;RPA (Robotic Process Automation)&lt;/strong&gt;. It enables users—whether individuals or enterprises—to describe their task needs in natural language, and have RPA bots automatically execute them.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/chatrpa/chatrpa2.png&#34;
+	width=&#34;600&#34;
+	height=&#34;318&#34;
+	srcset=&#34;https://Yetongye.github.io/p/chatrpa/chatrpa2_hu_73d890cc797ad838.png 480w, https://Yetongye.github.io/p/chatrpa/chatrpa2_hu_79a68ce71571b0eb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AI platforms&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-key-technologies&#34;&gt;🧠 Key Technologies
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Function&lt;/th&gt;
+          &lt;th&gt;Technology&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Prompt Parsing&lt;/td&gt;
+          &lt;td&gt;ChatGPT / OpenAI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Instruction Mapping&lt;/td&gt;
+          &lt;td&gt;Prompt Engineering&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Task Execution&lt;/td&gt;
+          &lt;td&gt;Custom RPA Components (search, type, watch, select, load)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Orchestration&lt;/td&gt;
+          &lt;td&gt;DAG Scheduler + Go backend&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Interface&lt;/td&gt;
+          &lt;td&gt;Interactive chat with GPT&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-usage-workflow&#34;&gt;🔄 Usage Workflow
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;User describes task&lt;/strong&gt; via chat&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ChatGPT interprets &amp;amp; decomposes&lt;/strong&gt; steps&lt;/li&gt;
+&lt;li&gt;Steps are mapped to &lt;strong&gt;programmatic instructions&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;RPA components are dynamically composed&lt;/li&gt;
+&lt;li&gt;RPA executes task &amp;amp; &lt;strong&gt;returns result to user&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🔁 Users can &lt;strong&gt;revise and re-run&lt;/strong&gt; the steps until satisfied.&lt;br&gt;
+☁️ All workflows are saved in the cloud for future reuse.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/chatrpa/chatrpa3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1029&#34;
+	srcset=&#34;https://Yetongye.github.io/p/chatrpa/chatrpa3_hu_3edb3960b6bd6175.png 480w, https://Yetongye.github.io/p/chatrpa/chatrpa3_hu_9846bbfda4890a89.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot of RPA running video&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;447px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-application-scenarios&#34;&gt;💡 Application Scenarios
+&lt;/h2&gt;&lt;h3 id=&#34;-enterprise-use-case--bank-monitoring-stock-dividends&#34;&gt;🏢 Enterprise Use Case – Bank Monitoring Stock Dividends
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Automatically extracts dividend announcements from stock exchange sites&lt;/li&gt;
+&lt;li&gt;Classifies by region/branch&lt;/li&gt;
+&lt;li&gt;Emails branch-specific files to account managers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-personal-use-case--academic-researcher&#34;&gt;🧑‍🔬 Personal Use Case – Academic Researcher
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pulls provincial newspaper reports about specific companies from WiseSearch&lt;/li&gt;
+&lt;li&gt;Downloads thousands of PDFs by date range&lt;/li&gt;
+&lt;li&gt;Runs headless with long-time automation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-product-value&#34;&gt;🚀 Product Value
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;No-Code Interface&lt;/strong&gt; — Chat-based task input lowers barrier for non-tech users&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Modular Automation&lt;/strong&gt; — RPA components can be reused &amp;amp; recombined&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Business-Grade Precision&lt;/strong&gt; — Prompts guide GPT to output correct flows&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;Enterprise &amp;amp; Personal Modes&lt;/strong&gt; — Scales from individual use to SaaS platforms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-cost-analysis&#34;&gt;💰 Cost Analysis
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Initial development cost ~¥50,000&lt;/li&gt;
+&lt;li&gt;Runtime cost per week ~¥1123 (Cloud + API usage)&lt;/li&gt;
+&lt;li&gt;Expansion cost per new RPA module ~¥7000+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/chatrpa/chatrpa4.png&#34;
+	width=&#34;856&#34;
+	height=&#34;397&#34;
+	srcset=&#34;https://Yetongye.github.io/p/chatrpa/chatrpa4_hu_3311b353c8610e10.png 480w, https://Yetongye.github.io/p/chatrpa/chatrpa4_hu_ac3299b3ec3d0355.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Costing&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;517px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-monetization-strategy&#34;&gt;💼 Monetization Strategy
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;B2B SaaS&lt;/strong&gt;: Custom platform + tailored modules for enterprises&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B2C Subscription&lt;/strong&gt;: Ready-to-use modules for automation enthusiasts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marketplace&lt;/strong&gt;: Share/sell user-created automation modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-risk-considerations&#34;&gt;⚠️ Risk Considerations
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Technical: Integration stability and prompt precision&lt;/li&gt;
+&lt;li&gt;Compliance: Data privacy concerns with API and third-party access&lt;/li&gt;
+&lt;li&gt;Mitigation: Anonymization, encryption, and potential for domestic AI substitution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;📎 &lt;strong&gt;Full Report (PDF)&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;ChatRPA.pdf&#34; &gt;Download Here&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

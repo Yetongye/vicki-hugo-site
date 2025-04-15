@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SQL on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/tags/sql/</link>
+        <description>Recent content in SQL on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Leasing Luxury Database Platform</title>
+        <link>https://Yetongye.github.io/p/leasing-luxury-database-platform/</link>
+        <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/p/leasing-luxury-database-platform/</guid>
+        <description>&lt;img src="https://Yetongye.github.io/p/leasing-luxury-database-platform/database3.png" alt="Featured image of post Leasing Luxury Database Platform" /&gt;&lt;h1 id=&#34;-leasing-system-for-designer-bags--database--web-development&#34;&gt;👜 Leasing System for Designer Bags – Database &amp;amp; Web Development
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview
+&lt;/h2&gt;&lt;p&gt;This system is a &lt;strong&gt;rental management platform&lt;/strong&gt; for a luxury handbag business built with &lt;strong&gt;MySQL and PHP&lt;/strong&gt;. The platform supports &lt;strong&gt;customer shopping, employee data dashboards, and inventory uploads&lt;/strong&gt;, demonstrating end-to-end database-driven web development.&lt;/p&gt;
+&lt;p&gt;Key technologies used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PHP (Login, Register, Rent, CRUD logic)&lt;/li&gt;
+&lt;li&gt;MySQL (Stored Procedures, Triggers, Views)&lt;/li&gt;
+&lt;li&gt;HTML/CSS/JavaScript (Shop UI, form validation)&lt;/li&gt;
+&lt;li&gt;phpMyAdmin and XAMPP for environment setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/leasing-luxury-database-platform/database1.png&#34;
+	width=&#34;2272&#34;
+	height=&#34;1050&#34;
+	srcset=&#34;https://Yetongye.github.io/p/leasing-luxury-database-platform/database1_hu_10fef3a4a16bc29d.png 480w, https://Yetongye.github.io/p/leasing-luxury-database-platform/database1_hu_be1eba9c7db62075.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Database&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;519px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/leasing-luxury-database-platform/databse2.png&#34;
+	width=&#34;1694&#34;
+	height=&#34;1212&#34;
+	srcset=&#34;https://Yetongye.github.io/p/leasing-luxury-database-platform/databse2_hu_69120854e79a43db.png 480w, https://Yetongye.github.io/p/leasing-luxury-database-platform/databse2_hu_c2823d30fb3b5324.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;html&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;335px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;database-design--features&#34;&gt;Database Design &amp;amp; Features
+&lt;/h2&gt;&lt;p&gt;The system uses &lt;strong&gt;five core relational tables&lt;/strong&gt; and several stored routines.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Table&lt;/th&gt;
+          &lt;th&gt;Functionality&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;bags&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Stores bag images and IDs&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;products&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Contains brand, price, color, and availability&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;customer&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;User account and profile data&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;rent&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Active rentals&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;cus_rent_return&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Logs returns for auditing and reporting&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;database-functionalities&#34;&gt;Database Functionalities
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Multi-table relational integrity for rental workflows&lt;/li&gt;
+&lt;li&gt;Stored procedures for bag filtering, customer ranking, and transaction summaries&lt;/li&gt;
+&lt;li&gt;Triggers for return calculations and bag availability&lt;/li&gt;
+&lt;li&gt;Data aggregation views for admin dashboards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;implementation-breakdown&#34;&gt;Implementation Breakdown
+&lt;/h2&gt;&lt;h3 id=&#34;code-structure&#34;&gt;Code Structure
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;File/Folder&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/php/connection.php&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;MySQL connection handler&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/php/Rent.php&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Booking logic &amp;amp; validation&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/shop.php&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Customer shop interface&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/data.php&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Staff dashboard &amp;amp; reporting&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/shelves.php&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Product upload &amp;amp; management&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/details.php&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Bag details page with gallery&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;/login/&lt;/code&gt; &amp;amp; &lt;code&gt;/main/&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Login UI and shop UI assets&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;building-the-database&#34;&gt;Building the Database
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Designed relational schema using MySQL&lt;/li&gt;
+&lt;li&gt;Created stored procedures (&lt;code&gt;Baggs_by_Manufacturer&lt;/code&gt;, &lt;code&gt;report_customer_amount&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Added triggers to auto-update inventory and log returns&lt;/li&gt;
+&lt;li&gt;Integrated SQL logic into PHP front-end using &lt;code&gt;mysqli_query&lt;/code&gt; and &lt;code&gt;CALL&lt;/code&gt; statements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;data-platform-dataphp&#34;&gt;Data Platform (&lt;code&gt;data.php&lt;/code&gt;)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;View &lt;strong&gt;customer rental activity&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Display &lt;strong&gt;bags by manufacturer&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rank &lt;strong&gt;top customers&lt;/strong&gt; by total rental hours&lt;/li&gt;
+&lt;li&gt;Report &lt;strong&gt;total rental income per customer&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;shopping-platform-shopphp&#34;&gt;Shopping Platform (&lt;code&gt;shop.php&lt;/code&gt;)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Grid/list toggle view&lt;/li&gt;
+&lt;li&gt;Filter by &lt;strong&gt;brand&lt;/strong&gt; and &lt;strong&gt;color&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Validate rental date &amp;amp; availability&lt;/li&gt;
+&lt;li&gt;Displays stock status and rental button&lt;/li&gt;
+&lt;li&gt;Handles invalid input, unauthorized access, duplicate booking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;inventory-platform-shelvesphp&#34;&gt;Inventory Platform (&lt;code&gt;shelves.php&lt;/code&gt;)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Upload new items with image, brand, price&lt;/li&gt;
+&lt;li&gt;Calls stored procedures to insert entries&lt;/li&gt;
+&lt;li&gt;Validates required fields and image format&lt;/li&gt;
+&lt;li&gt;Refreshes product list after insert&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;automation-logic&#34;&gt;Automation Logic
+&lt;/h2&gt;&lt;h3 id=&#34;on-return&#34;&gt;On Return
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Trigger calculates total rental time + cost&lt;/li&gt;
+&lt;li&gt;Marks item as available&lt;/li&gt;
+&lt;li&gt;Inserts return into log table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;on-rent&#34;&gt;On Rent
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Prevents rental if overlapping or past date&lt;/li&gt;
+&lt;li&gt;Confirms customer credentials and input integrity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-debugging-notes&#34;&gt;📌 Debugging Notes
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Upgraded macOS XAMPP to unlock stored procedure support&lt;/li&gt;
+&lt;li&gt;Replaced &lt;code&gt;$_GET[id]&lt;/code&gt; with &lt;code&gt;isset()&lt;/code&gt; checks to avoid errors&lt;/li&gt;
+&lt;li&gt;Used &lt;code&gt;var_dump()&lt;/code&gt; for debugging data propagation&lt;/li&gt;
+&lt;li&gt;Carefully handled SQL joins, foreign keys, session logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

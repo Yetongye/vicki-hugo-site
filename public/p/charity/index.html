@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="❤️ Charity Donation Prediction with Machine Learning Project Overview This project applies machine learning to help a charity organization optimize its direct mail fundraising strategy, reducing cost while maximizing return on investment. The goal was two-fold:\nClassify potential donors (who will donate) Predict donation amounts for identified donors Model Strategy Two separate models were created:\n1. Random Forest Classifier Predicts whether a person will donate (donr = 1/0) Achieved 88.85% accuracy on the test set Identified 408 donors out of 2007 samples 2. Linear Regression Model Predicts donation amount (damt) for donr = 1 Achieved R² = 0.56 and MAE = $0.99 Accurate, cost-efficient way to forecast campaign returns Data Insights Features grouped by: demographics, wealth, donation history Strong predictors: lifetime giving (lgif, rgif), property value (avhv), income (incm) Most monetary values were right-skewed → normalized/scaled during preprocessing Heatmaps showed low correlation between wealth &amp; donation, confirming need for advanced models Model Development Tools: Python, Pandas, scikit-learn Preprocessing: Removed irrelevant features (ID, damt, donr) Feature scaling with StandardScaler Used separate training/test sets Pipeline: Classification first (filter donors) Then regression on predicted donors only Business Value 💡 Strategy 1: Focus on Top 25% Predicted Donors 102 donors selected Avg donation: $50.23 ROI: 2,411.5% Net profit: $4,919.46 💡 Strategy 2: Mail to All 408 Predicted Donors Avg donation: $12.09 ROI: 504.2% Net profit: $4,113.12 Traditional blanket mailing: Net loss of $1,099.50\n">
+<title>Charity</title>
+
+<link rel='canonical' href='http://localhost:1313/p/charity/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Charity">
+<meta property='og:description' content="❤️ Charity Donation Prediction with Machine Learning Project Overview This project applies machine learning to help a charity organization optimize its direct mail fundraising strategy, reducing cost while maximizing return on investment. The goal was two-fold:\nClassify potential donors (who will donate) Predict donation amounts for identified donors Model Strategy Two separate models were created:\n1. Random Forest Classifier Predicts whether a person will donate (donr = 1/0) Achieved 88.85% accuracy on the test set Identified 408 donors out of 2007 samples 2. Linear Regression Model Predicts donation amount (damt) for donr = 1 Achieved R² = 0.56 and MAE = $0.99 Accurate, cost-efficient way to forecast campaign returns Data Insights Features grouped by: demographics, wealth, donation history Strong predictors: lifetime giving (lgif, rgif), property value (avhv), income (incm) Most monetary values were right-skewed → normalized/scaled during preprocessing Heatmaps showed low correlation between wealth &amp; donation, confirming need for advanced models Model Development Tools: Python, Pandas, scikit-learn Preprocessing: Removed irrelevant features (ID, damt, donr) Feature scaling with StandardScaler Used separate training/test sets Pipeline: Classification first (filter donors) Then regression on predicted donors only Business Value 💡 Strategy 1: Focus on Top 25% Predicted Donors 102 donors selected Avg donation: $50.23 ROI: 2,411.5% Net profit: $4,919.46 💡 Strategy 2: Mail to All 408 Predicted Donors Avg donation: $12.09 ROI: 504.2% Net profit: $4,113.12 Traditional blanket mailing: Net loss of $1,099.50\n">
+<meta property='og:url' content='http://localhost:1313/p/charity/'>
+<meta property='og:site_name' content='Vicki Ye&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='machine learning' /><meta property='article:published_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-02T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/p/charity/charity1.png' />
+<meta name="twitter:title" content="Charity">
+<meta name="twitter:description" content="❤️ Charity Donation Prediction with Machine Learning Project Overview This project applies machine learning to help a charity organization optimize its direct mail fundraising strategy, reducing cost while maximizing return on investment. The goal was two-fold:\nClassify potential donors (who will donate) Predict donation amounts for identified donors Model Strategy Two separate models were created:\n1. Random Forest Classifier Predicts whether a person will donate (donr = 1/0) Achieved 88.85% accuracy on the test set Identified 408 donors out of 2007 samples 2. Linear Regression Model Predicts donation amount (damt) for donr = 1 Achieved R² = 0.56 and MAE = $0.99 Accurate, cost-efficient way to forecast campaign returns Data Insights Features grouped by: demographics, wealth, donation history Strong predictors: lifetime giving (lgif, rgif), property value (avhv), income (incm) Most monetary values were right-skewed → normalized/scaled during preprocessing Heatmaps showed low correlation between wealth &amp; donation, confirming need for advanced models Model Development Tools: Python, Pandas, scikit-learn Preprocessing: Removed irrelevant features (ID, damt, donr) Feature scaling with StandardScaler Used separate training/test sets Pipeline: Classification first (filter donors) Then regression on predicted donors only Business Value 💡 Strategy 1: Focus on Top 25% Predicted Donors 102 donors selected Avg donation: $50.23 ROI: 2,411.5% Net profit: $4,919.46 💡 Strategy 2: Mail to All 408 Predicted Donors Avg donation: $12.09 ROI: 504.2% Net profit: $4,113.12 Traditional blanket mailing: Net loss of $1,099.50\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/charity/charity1.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_9487de79c18ab82a.png" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Vicki Ye&#39;s Blog</a></h1>
+            <h2 class="site-description">Welcome to my website!</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/my-resume/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>My Resume</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#model-strategy">Model Strategy</a>
+      <ol>
+        <li><a href="#1-random-forest-classifier">1. <strong>Random Forest Classifier</strong></a></li>
+        <li><a href="#2-linear-regression-model">2. <strong>Linear Regression Model</strong></a></li>
+      </ol>
+    </li>
+    <li><a href="#data-insights">Data Insights</a></li>
+    <li><a href="#model-development">Model Development</a></li>
+    <li><a href="#business-value">Business Value</a>
+      <ol>
+        <li><a href="#-strategy-1-focus-on-top-25-predicted-donors">💡 Strategy 1: Focus on Top 25% Predicted Donors</a></li>
+        <li><a href="#-strategy-2-mail-to-all-408-predicted-donors">💡 Strategy 2: Mail to All 408 Predicted Donors</a></li>
+      </ol>
+    </li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#business-problem-solution">Business Problem Solution</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/charity/">
+                <img src="/p/charity/charity1_hu_f3378ac205d1eb0b.png"
+                        srcset="/p/charity/charity1_hu_f3378ac205d1eb0b.png 800w, /p/charity/charity1_hu_ecaee02e0f6d743.png 1600w"
+                        width="800" 
+                        height="308" 
+                        loading="lazy"
+                        alt="Featured image of post Charity" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/project/" >
+                Project
+            </a>
+        
+            <a href="/categories/graduate/" >
+                Graduate
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/charity/">Charity</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 02, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="-charity-donation-prediction-with-machine-learning">❤️ Charity Donation Prediction with Machine Learning
+</h1><hr>
+<h2 id="project-overview">Project Overview
+</h2><p>This project applies <strong>machine learning</strong> to help a charity organization optimize its <strong>direct mail fundraising strategy</strong>, reducing cost while maximizing return on investment. The goal was two-fold:</p>
+<ul>
+<li><strong>Classify potential donors</strong> (who will donate)</li>
+<li><strong>Predict donation amounts</strong> for identified donors</li>
+</ul>
+<hr>
+<h2 id="model-strategy">Model Strategy
+</h2><p>Two separate models were created:</p>
+<h3 id="1-random-forest-classifier">1. <strong>Random Forest Classifier</strong>
+</h3><ul>
+<li>Predicts whether a person will donate (<code>donr = 1/0</code>)</li>
+<li>Achieved <strong>88.85% accuracy</strong> on the test set</li>
+<li>Identified <strong>408 donors</strong> out of 2007 samples</li>
+</ul>
+<h3 id="2-linear-regression-model">2. <strong>Linear Regression Model</strong>
+</h3><ul>
+<li>Predicts donation amount (<code>damt</code>) for <code>donr = 1</code></li>
+<li>Achieved <strong>R² = 0.56</strong> and <strong>MAE = $0.99</strong></li>
+<li>Accurate, cost-efficient way to forecast campaign returns</li>
+</ul>
+<hr>
+<h2 id="data-insights">Data Insights
+</h2><ul>
+<li><strong>Features grouped by</strong>: demographics, wealth, donation history</li>
+<li>Strong predictors: lifetime giving (<code>lgif</code>, <code>rgif</code>), property value (<code>avhv</code>), income (<code>incm</code>)</li>
+<li>Most monetary values were <strong>right-skewed</strong> → normalized/scaled during preprocessing</li>
+<li>Heatmaps showed low correlation between wealth &amp; donation, confirming need for advanced models</li>
+</ul>
+<hr>
+<h2 id="model-development">Model Development
+</h2><ul>
+<li><strong>Tools</strong>: Python, Pandas, scikit-learn</li>
+<li><strong>Preprocessing</strong>:
+<ul>
+<li>Removed irrelevant features (<code>ID</code>, <code>damt</code>, <code>donr</code>)</li>
+<li>Feature scaling with StandardScaler</li>
+<li>Used separate training/test sets</li>
+</ul>
+</li>
+<li><strong>Pipeline</strong>:
+<ul>
+<li>Classification first (filter donors)</li>
+<li>Then regression on predicted donors only</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="business-value">Business Value
+</h2><h3 id="-strategy-1-focus-on-top-25-predicted-donors">💡 Strategy 1: Focus on Top 25% Predicted Donors
+</h3><ul>
+<li>102 donors selected</li>
+<li>Avg donation: <strong>$50.23</strong></li>
+<li>ROI: <strong>2,411.5%</strong></li>
+<li>Net profit: <strong>$4,919.46</strong></li>
+</ul>
+<h3 id="-strategy-2-mail-to-all-408-predicted-donors">💡 Strategy 2: Mail to All 408 Predicted Donors
+</h3><ul>
+<li>Avg donation: <strong>$12.09</strong></li>
+<li>ROI: <strong>504.2%</strong></li>
+<li>Net profit: <strong>$4,113.12</strong></li>
+</ul>
+<p>Traditional blanket mailing: <strong>Net loss of $1,099.50</strong></p>
+<hr>
+<h2 id="results">Results
+</h2><ul>
+<li>Classification Model: Random forest - due to its ability to handle complex feature interactions and better accuracy</li>
+<li>Prediction Model: Linear Regression - simplicity, interpretability, and efficiency in modeling relationships between predictors and the target variable</li>
+</ul>
+<p><img src="/p/charity/charity2.png"
+	width="2584"
+	height="852"
+	srcset="/p/charity/charity2_hu_285ec12e97a9704c.png 480w, /p/charity/charity2_hu_29c828818eaa8fd.png 1024w"
+	loading="lazy"
+	
+		alt="Model Selection"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="303"
+		data-flex-basis="727px"
+	
+></p>
+<ul>
+<li>Predict the donation amounts (damt) for donors identified through the classification model</li>
+<li>Provide accurate predictions of donation amounts to optimize resource allocation and enhance the charity&rsquo;s return on investment</li>
+</ul>
+<p><img src="/p/charity/charity3.png"
+	width="1192"
+	height="736"
+	srcset="/p/charity/charity3_hu_5e7312036de1b897.png 480w, /p/charity/charity3_hu_c0cf1a2079042c16.png 1024w"
+	loading="lazy"
+	
+		alt="Prediction Model"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="161"
+		data-flex-basis="388px"
+	
+></p>
+<ul>
+<li>The proportion of donors in the dataset is low, with the majority of the sample being non-donors (1589) and only a small proportion of donors (418)</li>
+<li>Most of the donations are in the lower range ($0-50), with only a few donations in the higher range.</li>
+</ul>
+<p><img src="/p/charity/charity4.png"
+	width="2410"
+	height="842"
+	srcset="/p/charity/charity4_hu_b45b9720b503a70b.png 480w, /p/charity/charity4_hu_93071c4c5cd86088.png 1024w"
+	loading="lazy"
+	
+		alt="Predict the values for Scoring Data"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="286"
+		data-flex-basis="686px"
+	
+></p>
+<hr>
+<h2 id="business-problem-solution">Business Problem Solution
+</h2><p>By targeting only high-value predicted donors:</p>
+<ul>
+<li>Reduced mailing cost from $4,014 to $204</li>
+<li>Improved net profit by over <strong>$6,000</strong></li>
+<li>Demonstrated how ML can guide strategic decision-making in the nonprofit sector</li>
+</ul>
+<p><img src="/p/charity/charity5.png"
+	width="2790"
+	height="1276"
+	srcset="/p/charity/charity5_hu_b20a71306663130a.png 480w, /p/charity/charity5_hu_1bc4316854c1a90a.png 1024w"
+	loading="lazy"
+	
+		alt="Business Problem Solution"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="218"
+		data-flex-basis="524px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/python/">Python</a>
+        
+            <a href="/tags/machine-learning/">Machine Learning</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/mbti-classification/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mbti-classification/mbtiprediction.0f00022e8d9c4a56c5103e07cacd4e67.0f00022e8d9c4a56c5103e07cacd4e67_hu_18e77641a90b9587.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post MBTI Classification"
+                        
+                        data-hash="md5-DwACLo2cSlbFED4Hys1OZw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MBTI Classification</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/financial-text-summarization/">
+        
+        
+            <div class="article-image">
+                <img src="/p/financial-text-summarization/textsummarization.5b4c9ec3c9063529b8b264b9c7477990_hu_7e9cccba36366a1b.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Financial Text Summarization"
+                        
+                        data-hash="md5-W0yew8kGNSm4smS5x0d5kA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Financial Text Summarization</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/product/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Product</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/chatrpa/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chatrpa/chatrpa1.91b8f4f0866bcf5c20d4cb188bfe0bf3_hu_467ff64473ffc7f6.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post ChatRPA"
+                        
+                        data-hash="md5-kbj08IZrz1wg1MsYi/4L8w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ChatRPA</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/leasing-luxury-database-platform/">
+        
+        
+            <div class="article-image">
+                <img src="/p/leasing-luxury-database-platform/database3.9a388798966f92023cb4bee04bff0171_hu_248fdeece824ce26.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Leasing Luxury Database Platform"
+                        
+                        data-hash="md5-mjiHmJZvkgI8tL7gS/8BcQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Leasing Luxury Database Platform</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Vicki Ye
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.247f91d3edfc841e6d1024b714a095bdb37437cf5358a5816a3c6758f9720ed7.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

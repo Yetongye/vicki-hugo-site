@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/categories/</link>
+        <description>Recent content in Categories on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About Me</title>
+        <link>https://Yetongye.github.io/categories/about-me/</link>
+        <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/categories/about-me/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Graduate</title>
+        <link>https://Yetongye.github.io/categories/graduate/</link>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/categories/graduate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Project</title>
+        <link>https://Yetongye.github.io/categories/project/</link>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/categories/project/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Undergraduate</title>
+        <link>https://Yetongye.github.io/categories/undergraduate/</link>
+        <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/categories/undergraduate/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

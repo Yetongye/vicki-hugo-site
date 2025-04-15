@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Machine Learning on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/tags/machine-learning/</link>
+        <description>Recent content in Machine Learning on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MBTI Classification</title>
+        <link>https://Yetongye.github.io/p/mbti-classification/</link>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/p/mbti-classification/</guid>
+        <description>&lt;img src="https://Yetongye.github.io/p/mbti-classification/mbtiprediction.jpg" alt="Featured image of post MBTI Classification" /&gt;&lt;h1 id=&#34;mbti-personality-prediction-project&#34;&gt;MBTI Personality Prediction Project
+&lt;/h1&gt;&lt;p&gt;This project was developed with the goal of &lt;strong&gt;automating MBTI personality type predictions&lt;/strong&gt; using user-generated text.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement
+&lt;/h2&gt;&lt;p&gt;Traditional MBTI personality assessments rely on &lt;strong&gt;self-reports&lt;/strong&gt;, which can be subjective and biased.&lt;br&gt;
+&lt;strong&gt;Goal&lt;/strong&gt;: Predict personality types based on text data, offering a scalable and objective solution for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recruitment &amp;amp; candidate-job fit&lt;/li&gt;
+&lt;li&gt;Personalized recommendations&lt;/li&gt;
+&lt;li&gt;Mental health applications&lt;/li&gt;
+&lt;li&gt;Ad targeting &amp;amp; behavioral analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;workflow&#34;&gt;Workflow
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1. Data Cleaning&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tokenization&lt;/li&gt;
+&lt;li&gt;Removal of URLs, special characters, stopwords&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Feature Engineering&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Traditional: TF-IDF&lt;/li&gt;
+&lt;li&gt;Deep Learning: Token Embeddings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Model Training&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compared Logistic Regression, Random Forest, and GRU (deep learning)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Evaluation Metrics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accuracy, Precision, F1-score&lt;/li&gt;
+&lt;li&gt;Stratified train/test split to reduce class imbalance impact&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;5. Deployment Consideration&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;API-based prediction system for scalable real-time usage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;models--performance&#34;&gt;Models &amp;amp; Performance
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Model&lt;/th&gt;
+          &lt;th&gt;Accuracy&lt;/th&gt;
+          &lt;th&gt;Precision&lt;/th&gt;
+          &lt;th&gt;F1-score&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Logistic Regression&lt;/td&gt;
+          &lt;td&gt;0.6406&lt;/td&gt;
+          &lt;td&gt;0.66&lt;/td&gt;
+          &lt;td&gt;0.64&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Random Forest&lt;/td&gt;
+          &lt;td&gt;0.6083&lt;/td&gt;
+          &lt;td&gt;0.64&lt;/td&gt;
+          &lt;td&gt;0.59&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;GRU (Deep Learning)&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.6486&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;0.7974&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;N/A&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Logistic Regression&lt;/strong&gt;: Fast, interpretable, but weak in semantic nuance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Forest&lt;/strong&gt;: Great for short-texts and robust to overfitting&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GRU&lt;/strong&gt;: Best for long-form text like Reddit posts and job applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;insights&#34;&gt;Insights
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;GRU provided the best accuracy and is suited for real-world, high-stakes predictions&lt;/li&gt;
+&lt;li&gt;Logistic Regression still performs well in constrained environments&lt;/li&gt;
+&lt;li&gt;Wordcloud visualizations helped illustrate key lexical differences between personality types&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;future-improvements&#34;&gt;Future Improvements
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Add more data, especially underrepresented MBTI types (e.g., INFJ)&lt;/li&gt;
+&lt;li&gt;Try BERT/RoBERTa for better context modeling&lt;/li&gt;
+&lt;li&gt;Use SMOTE to balance class distribution&lt;/li&gt;
+&lt;li&gt;Incorporate user metadata (likes, shares, activity patterns)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;business-impact&#34;&gt;Business Impact
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Scalable pipeline to support AI-driven hiring platforms&lt;/li&gt;
+&lt;li&gt;Enables real-time personalization for apps &amp;amp; services&lt;/li&gt;
+&lt;li&gt;Bridges psychology and machine learning in a production-ready format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;📎 &lt;strong&gt;PDF Slide Deck&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;MBTI_Classification_VickiYE.pdf&#34; &gt;MBTI Classification Report&lt;/a&gt;&lt;br&gt;
+💻 &lt;strong&gt;Code Repository&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;VickiYE_mbtiprediction.ipynb&#34; &gt;MBTI Classification Code&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Charity Donation Prediction with Machine Learning</title>
+        <link>https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/</link>
+        <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/</guid>
+        <description>&lt;img src="https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity1.png" alt="Featured image of post Charity Donation Prediction with Machine Learning" /&gt;&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview
+&lt;/h2&gt;&lt;p&gt;This project applies &lt;strong&gt;machine learning&lt;/strong&gt; to help a charity organization optimize its &lt;strong&gt;direct mail fundraising strategy&lt;/strong&gt;, reducing cost while maximizing return on investment. The goal was two-fold:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Classify potential donors&lt;/strong&gt; (who will donate)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Predict donation amounts&lt;/strong&gt; for identified donors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;model-strategy&#34;&gt;Model Strategy
+&lt;/h2&gt;&lt;p&gt;Two separate models were created:&lt;/p&gt;
+&lt;h3 id=&#34;1-random-forest-classifier&#34;&gt;1. &lt;strong&gt;Random Forest Classifier&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Predicts whether a person will donate (&lt;code&gt;donr = 1/0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Achieved &lt;strong&gt;88.85% accuracy&lt;/strong&gt; on the test set&lt;/li&gt;
+&lt;li&gt;Identified &lt;strong&gt;408 donors&lt;/strong&gt; out of 2007 samples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-linear-regression-model&#34;&gt;2. &lt;strong&gt;Linear Regression Model&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Predicts donation amount (&lt;code&gt;damt&lt;/code&gt;) for &lt;code&gt;donr = 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Achieved &lt;strong&gt;R² = 0.56&lt;/strong&gt; and &lt;strong&gt;MAE = $0.99&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Accurate, cost-efficient way to forecast campaign returns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;data-insights&#34;&gt;Data Insights
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Features grouped by&lt;/strong&gt;: demographics, wealth, donation history&lt;/li&gt;
+&lt;li&gt;Strong predictors: lifetime giving (&lt;code&gt;lgif&lt;/code&gt;, &lt;code&gt;rgif&lt;/code&gt;), property value (&lt;code&gt;avhv&lt;/code&gt;), income (&lt;code&gt;incm&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Most monetary values were &lt;strong&gt;right-skewed&lt;/strong&gt; → normalized/scaled during preprocessing&lt;/li&gt;
+&lt;li&gt;Heatmaps showed low correlation between wealth &amp;amp; donation, confirming need for advanced models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;model-development&#34;&gt;Model Development
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Python, Pandas, scikit-learn&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preprocessing&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Removed irrelevant features (&lt;code&gt;ID&lt;/code&gt;, &lt;code&gt;damt&lt;/code&gt;, &lt;code&gt;donr&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Feature scaling with StandardScaler&lt;/li&gt;
+&lt;li&gt;Used separate training/test sets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pipeline&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Classification first (filter donors)&lt;/li&gt;
+&lt;li&gt;Then regression on predicted donors only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;business-value&#34;&gt;Business Value
+&lt;/h2&gt;&lt;h3 id=&#34;-strategy-1-focus-on-top-25-predicted-donors&#34;&gt;💡 Strategy 1: Focus on Top 25% Predicted Donors
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;102 donors selected&lt;/li&gt;
+&lt;li&gt;Avg donation: &lt;strong&gt;$50.23&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;ROI: &lt;strong&gt;2,411.5%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Net profit: &lt;strong&gt;$4,919.46&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-strategy-2-mail-to-all-408-predicted-donors&#34;&gt;💡 Strategy 2: Mail to All 408 Predicted Donors
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Avg donation: &lt;strong&gt;$12.09&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;ROI: &lt;strong&gt;504.2%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Net profit: &lt;strong&gt;$4,113.12&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Traditional blanket mailing: &lt;strong&gt;Net loss of $1,099.50&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Classification Model: Random forest - due to its ability to handle complex feature interactions and better accuracy&lt;/li&gt;
+&lt;li&gt;Prediction Model: Linear Regression - simplicity, interpretability, and efficiency in modeling relationships between predictors and the target variable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity2.png&#34;
+	width=&#34;2584&#34;
+	height=&#34;852&#34;
+	srcset=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity2_hu_285ec12e97a9704c.png 480w, https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity2_hu_29c828818eaa8fd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Model Selection&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;303&#34;
+		data-flex-basis=&#34;727px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Predict the donation amounts (damt) for donors identified through the classification model&lt;/li&gt;
+&lt;li&gt;Provide accurate predictions of donation amounts to optimize resource allocation and enhance the charity&amp;rsquo;s return on investment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity3.png&#34;
+	width=&#34;1192&#34;
+	height=&#34;736&#34;
+	srcset=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity3_hu_5e7312036de1b897.png 480w, https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity3_hu_c0cf1a2079042c16.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Prediction Model&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;388px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The proportion of donors in the dataset is low, with the majority of the sample being non-donors (1589) and only a small proportion of donors (418)&lt;/li&gt;
+&lt;li&gt;Most of the donations are in the lower range ($0-50), with only a few donations in the higher range.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity4.png&#34;
+	width=&#34;2410&#34;
+	height=&#34;842&#34;
+	srcset=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity4_hu_b45b9720b503a70b.png 480w, https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity4_hu_93071c4c5cd86088.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Predict the values for Scoring Data&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;286&#34;
+		data-flex-basis=&#34;686px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;business-problem-solution&#34;&gt;Business Problem Solution
+&lt;/h2&gt;&lt;p&gt;By targeting only high-value predicted donors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced mailing cost from $4,014 to $204&lt;/li&gt;
+&lt;li&gt;Improved net profit by over &lt;strong&gt;$6,000&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Demonstrated how ML can guide strategic decision-making in the nonprofit sector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity5.png&#34;
+	width=&#34;2790&#34;
+	height=&#34;1276&#34;
+	srcset=&#34;https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity5_hu_b20a71306663130a.png 480w, https://Yetongye.github.io/p/charity-donation-prediction-with-machine-learning/charity5_hu_1bc4316854c1a90a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Business Problem Solution&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;524px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;📎 &lt;strong&gt;PDF Slide Deck&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;charity.pptx&#34; &gt;Charity Prediction slides&lt;/a&gt;&lt;br&gt;
+💻 &lt;strong&gt;Code Repository&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;charity.ipynb&#34; &gt;Charity Prediction Code&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Vicki Ye&#39;s Blog</title>
+        <link>https://Yetongye.github.io/tags/</link>
+        <description>Recent content in Tags on Vicki Ye&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Vicki Ye</copyright>
+        <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Yetongye.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Machine Learning</title>
+        <link>https://Yetongye.github.io/tags/machine-learning/</link>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/machine-learning/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://Yetongye.github.io/tags/python/</link>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AI</title>
+        <link>https://Yetongye.github.io/tags/ai/</link>
+        <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/ai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Project Managment</title>
+        <link>https://Yetongye.github.io/tags/project-managment/</link>
+        <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/project-managment/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>RPA</title>
+        <link>https://Yetongye.github.io/tags/rpa/</link>
+        <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/rpa/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Javascript</title>
+        <link>https://Yetongye.github.io/tags/javascript/</link>
+        <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PHP</title>
+        <link>https://Yetongye.github.io/tags/php/</link>
+        <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/php/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SQL</title>
+        <link>https://Yetongye.github.io/tags/sql/</link>
+        <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://Yetongye.github.io/tags/sql/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

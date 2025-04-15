@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Intelligent Process Automation with ChatGPT">
+<title>ChatRPA</title>
+
+<link rel='canonical' href='https://Yetongye.github.io/p/chatrpa/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="ChatRPA">
+<meta property='og:description' content="Intelligent Process Automation with ChatGPT">
+<meta property='og:url' content='https://Yetongye.github.io/p/chatrpa/'>
+<meta property='og:site_name' content='Vicki Ye&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='RPA' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2023-07-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-01T00:00:00&#43;00:00'/><meta property='og:image' content='https://Yetongye.github.io/p/chatrpa/chatrpa1.png' />
+<meta name="twitter:title" content="ChatRPA">
+<meta name="twitter:description" content="Intelligent Process Automation with ChatGPT"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Yetongye.github.io/p/chatrpa/chatrpa1.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_9487de79c18ab82a.png" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Vicki Ye&#39;s Blog</a></h1>
+            <h2 class="site-description">Welcome to my website!</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://blog.csdn.net/bianchengfive'
+                        target="_blank"
+                        title="CSDN"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 0c282.784 0 512 229.216 512 512s-229.216 512-512 512S0 794.784 0 512 229.216 0 512 0z m189.952 752l11.2-108.224c-31.904 9.536-100.928 16.128-147.712 16.128-134.464 0-205.728-47.296-195.328-146.304 11.584-110.688 113.152-145.696 232.64-145.696 54.784 0 122.432 8.8 151.296 18.336L768 272.704C724.544 262.24 678.272 256 599.584 256c-203.2 0-388.704 94.88-406.4 263.488C178.336 660.96 303.584 768 535.616 768c80.672 0 138.464-6.432 166.336-16z" fill="#CE000D" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Yetongye'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://huggingface.co/Vickiiiyippp'
+                        target="_blank"
+                        title="Hugging face"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M967.001422 455.05347c0 251.264055-203.789415 455.087599-455.05347 455.087599-251.298185 0-455.05347-203.823545-455.05347-455.087599C56.894482 203.755285 260.649767 0 511.947952 0c251.264055 0 455.05347 203.755285 455.05347 455.05347z" fill="#FFCC4D" /><path d="M735.498558 458.705365a10.580258 10.580258 0 0 0-15.18779-0.784987c-0.921506 0.819117-93.959514 82.45775-208.362816 82.45775-114.130263 0-207.40718-81.638633-208.362816-82.45775a10.648517 10.648517 0 0 0-15.22192 0.819117 16.211685 16.211685 0 0 0-2.252571 17.849918c3.071688 6.143375 77.065232 149.147503 225.837307 149.147504 148.806205 0 222.765619-143.004128 225.837306-149.147504a16.211685 16.211685 0 0 0-2.25257-17.849918z" fill="#664500" /><path d="M380.889276 658.535716l-43.754485-63.140248s-15.426698-24.641761-40.102589-9.215063c-24.675891 15.358439-9.215063 40.06846-9.215063 40.06846l50.00025 96.143825s4.095584 21.843113-26.109346-2.59387c-13.174127-10.648517-5.631427-4.641661-5.631427-4.641661l-12.49153-10.238959-156.178256-128.225897s-20.170749-21.297035-38.669135 1.194545c-18.430126 22.49158 6.348155 38.123057 6.348155 38.123058l147.714049 121.331664c-3.412986 3.412986-13.720205 15.187789-17.064932 18.873815l-158.055398-129.693481s-20.204879-21.297035-38.635005 1.160415c-18.464256 22.49158 6.314025 38.123057 6.314025 38.123057l158.021267 129.761741c-2.935168 3.993194-10.341349 13.549556-13.071737 17.47449l-136.280545-111.911822S33.788565 679.86688 15.358439 702.32433c-18.532516 22.52571 6.314025 38.191317 6.314024 38.191318l144.881271 118.976704c-1.808883 5.08535-10.341349 18.395996-11.672414 23.344826l-104.437382-85.665957s-20.136619-21.399424-38.566746 1.160415c-18.498386 22.49158 6.279895 38.123057 6.279895 38.123058l168.669786 138.464856 11.262855 9.283323a174.608381 174.608381 0 0 0 238.909044-253.653146c-20.750957-22.252671-38.703265-47.030952-56.109496-72.014011z m631.129435 139.83005c-18.430126-22.55984-38.566746-1.160415-38.566745-1.160415l-104.437382 85.665957c-1.365195-4.94883-9.863531-18.293607-11.672414-23.344827l144.881271-118.976704s24.846541-15.699737 6.348154-38.191317c-18.430126-22.45745-38.635005-1.194545-38.635005-1.194545l-136.280545 111.911822c-2.730389-3.959064-10.170699-13.515426-13.071738-17.47449l158.021268-129.761741s24.812411-15.631477 6.314025-38.123057c-18.430126-22.49158-38.566746-1.160415-38.566746-1.160416l-158.089527 129.693482c-3.344727-3.686025-13.651945-15.460828-17.064932-18.873815l147.679919-121.331664s24.744151-15.631477 6.348155-38.123058c-18.498386-22.49158-38.635005-1.194545-38.635006-1.194545L730.379078 704.9182l-12.49153 10.273089s28.157137-23.890904-5.597298 4.641661c-33.788565 28.532566-26.109346 2.59387-26.109345 2.59387l50.00025-96.143825s15.426698-24.675891-9.215063-40.06846c-24.710021-15.426698-40.136719 9.215063-40.13672 9.215063l-43.754485 63.140247c-17.40623 24.98306-35.358539 49.761341-56.143625 72.014012a174.642511 174.642511 0 0 0 238.943174 253.653146l11.262855-9.249193 168.669785-138.464857c-0.136519 0 24.641761-15.699737 6.177506-38.157187z" fill="#F4900C" /><path d="M787.171171 312.39064c-1.433454-3.481246-36.518954-84.846841-108.669485-84.84684-72.082272 0-107.167771 81.365594-108.601226 84.84684a13.310647 13.310647 0 0 0 3.481246 15.221919c4.232103 3.651895 10.375478 3.754285 14.880621 0.341299 0.273039-0.238909 30.716877-23.208307 90.239359-23.208307 59.147053 0 89.556762 22.662229 90.273489 23.208307a11.706543 11.706543 0 0 0 14.84649-0.273039 13.310647 13.310647 0 0 0 3.549506-15.290179z m-312.834329 0c-1.501714-3.481246-36.553084-84.846841-108.703615-84.84684-72.048142 0-107.167771 81.365594-108.635355 84.84684a13.310647 13.310647 0 0 0 3.515376 15.221919c4.266233 3.651895 10.409608 3.754285 14.88062 0.341299 0.341299-0.238909 30.751007-23.208307 90.239359-23.208307 59.181183 0 89.590892 22.662229 90.273489 23.208307 2.150181 1.706493 4.675791 2.52561 7.235531 2.52561 2.730389 0 5.358389-0.955636 7.61096-2.798649a13.310647 13.310647 0 0 0 3.583635-15.290179z" fill="#664500" /><path d="M318.022068 724.645261s-73.720505 94.232553 13.788465 212.151231c6.006856 8.122908 21.331165 4.163843 14.81236-5.324258-7.133141-10.375478-78.225647-110.819667-11.399374-200.717727 0 0-10.819167-1.365195-17.201451-6.143376z m386.350054 2.764519s73.754635 94.266683-13.788465 212.185361c-6.040986 8.088778-21.331165 4.163843-14.81236-5.358388 7.099012-10.341349 78.225647-110.785537 11.365244-200.683598 0 0 10.853297-1.331065 17.235581-6.143375z" fill="#B55005" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/my-resume/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>My Resume</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-project-overview">📌 Project Overview</a></li>
+    <li><a href="#-key-technologies">🧠 Key Technologies</a></li>
+    <li><a href="#-usage-workflow">🔄 Usage Workflow</a></li>
+    <li><a href="#-application-scenarios">💡 Application Scenarios</a>
+      <ol>
+        <li><a href="#-enterprise-use-case--bank-monitoring-stock-dividends">🏢 Enterprise Use Case – Bank Monitoring Stock Dividends</a></li>
+        <li><a href="#-personal-use-case--academic-researcher">🧑‍🔬 Personal Use Case – Academic Researcher</a></li>
+      </ol>
+    </li>
+    <li><a href="#-product-value">🚀 Product Value</a></li>
+    <li><a href="#-cost-analysis">💰 Cost Analysis</a></li>
+    <li><a href="#-monetization-strategy">💼 Monetization Strategy</a></li>
+    <li><a href="#-risk-considerations">⚠️ Risk Considerations</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/chatrpa/">
+                <img src="/p/chatrpa/chatrpa1_hu_93d66e617ac51c5d.png"
+                        srcset="/p/chatrpa/chatrpa1_hu_93d66e617ac51c5d.png 800w, /p/chatrpa/chatrpa1_hu_8b635d624b3afa97.png 1600w"
+                        width="800" 
+                        height="335" 
+                        loading="lazy"
+                        alt="Featured image of post ChatRPA" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/project/" >
+                Project
+            </a>
+        
+            <a href="/categories/undergraduate/" >
+                Undergraduate
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/chatrpa/">ChatRPA</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Intelligent Process Automation with ChatGPT
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 01, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="-chatrpa-empowering-automation-with-ai--rpa">🤖 ChatRPA: Empowering Automation with AI + RPA
+</h1><hr>
+<h2 id="-project-overview">📌 Project Overview
+</h2><p><strong>ChatRPA</strong> is an intelligent automation assistant that combines the natural language power of <strong>ChatGPT</strong> with the operational efficiency of <strong>RPA (Robotic Process Automation)</strong>. It enables users—whether individuals or enterprises—to describe their task needs in natural language, and have RPA bots automatically execute them.</p>
+<p><img src="/p/chatrpa/chatrpa2.png"
+	width="600"
+	height="318"
+	srcset="/p/chatrpa/chatrpa2_hu_73d890cc797ad838.png 480w, /p/chatrpa/chatrpa2_hu_79a68ce71571b0eb.png 1024w"
+	loading="lazy"
+	
+		alt="AI platforms"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="452px"
+	
+></p>
+<hr>
+<h2 id="-key-technologies">🧠 Key Technologies
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Technology</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Prompt Parsing</td>
+          <td>ChatGPT / OpenAI</td>
+      </tr>
+      <tr>
+          <td>Instruction Mapping</td>
+          <td>Prompt Engineering</td>
+      </tr>
+      <tr>
+          <td>Task Execution</td>
+          <td>Custom RPA Components (search, type, watch, select, load)</td>
+      </tr>
+      <tr>
+          <td>Orchestration</td>
+          <td>DAG Scheduler + Go backend</td>
+      </tr>
+      <tr>
+          <td>Interface</td>
+          <td>Interactive chat with GPT</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="-usage-workflow">🔄 Usage Workflow
+</h2><ol>
+<li><strong>User describes task</strong> via chat</li>
+<li><strong>ChatGPT interprets &amp; decomposes</strong> steps</li>
+<li>Steps are mapped to <strong>programmatic instructions</strong></li>
+<li>RPA components are dynamically composed</li>
+<li>RPA executes task &amp; <strong>returns result to user</strong></li>
+</ol>
+<p>🔁 Users can <strong>revise and re-run</strong> the steps until satisfied.<br>
+☁️ All workflows are saved in the cloud for future reuse.</p>
+<p><img src="/p/chatrpa/chatrpa3.png"
+	width="1920"
+	height="1029"
+	srcset="/p/chatrpa/chatrpa3_hu_3edb3960b6bd6175.png 480w, /p/chatrpa/chatrpa3_hu_9846bbfda4890a89.png 1024w"
+	loading="lazy"
+	
+		alt="Screenshot of RPA running video"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
+></p>
+<hr>
+<h2 id="-application-scenarios">💡 Application Scenarios
+</h2><h3 id="-enterprise-use-case--bank-monitoring-stock-dividends">🏢 Enterprise Use Case – Bank Monitoring Stock Dividends
+</h3><ul>
+<li>Automatically extracts dividend announcements from stock exchange sites</li>
+<li>Classifies by region/branch</li>
+<li>Emails branch-specific files to account managers</li>
+</ul>
+<h3 id="-personal-use-case--academic-researcher">🧑‍🔬 Personal Use Case – Academic Researcher
+</h3><ul>
+<li>Pulls provincial newspaper reports about specific companies from WiseSearch</li>
+<li>Downloads thousands of PDFs by date range</li>
+<li>Runs headless with long-time automation</li>
+</ul>
+<hr>
+<h2 id="-product-value">🚀 Product Value
+</h2><ul>
+<li>✅ <strong>No-Code Interface</strong> — Chat-based task input lowers barrier for non-tech users</li>
+<li>✅ <strong>Modular Automation</strong> — RPA components can be reused &amp; recombined</li>
+<li>✅ <strong>Business-Grade Precision</strong> — Prompts guide GPT to output correct flows</li>
+<li>✅ <strong>Enterprise &amp; Personal Modes</strong> — Scales from individual use to SaaS platforms</li>
+</ul>
+<hr>
+<h2 id="-cost-analysis">💰 Cost Analysis
+</h2><ul>
+<li>Initial development cost ~¥50,000</li>
+<li>Runtime cost per week ~¥1123 (Cloud + API usage)</li>
+<li>Expansion cost per new RPA module ~¥7000+</li>
+</ul>
+<p><img src="/p/chatrpa/chatrpa4.png"
+	width="856"
+	height="397"
+	srcset="/p/chatrpa/chatrpa4_hu_3311b353c8610e10.png 480w, /p/chatrpa/chatrpa4_hu_ac3299b3ec3d0355.png 1024w"
+	loading="lazy"
+	
+		alt="Costing"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="215"
+		data-flex-basis="517px"
+	
+></p>
+<hr>
+<h2 id="-monetization-strategy">💼 Monetization Strategy
+</h2><ul>
+<li><strong>B2B SaaS</strong>: Custom platform + tailored modules for enterprises</li>
+<li><strong>B2C Subscription</strong>: Ready-to-use modules for automation enthusiasts</li>
+<li><strong>Marketplace</strong>: Share/sell user-created automation modules</li>
+</ul>
+<hr>
+<h2 id="-risk-considerations">⚠️ Risk Considerations
+</h2><ul>
+<li>Technical: Integration stability and prompt precision</li>
+<li>Compliance: Data privacy concerns with API and third-party access</li>
+<li>Mitigation: Anonymization, encryption, and potential for domestic AI substitution</li>
+</ul>
+<hr>
+<p>📎 <strong>Full Report (PDF)</strong>: <a class="link" href="ChatRPA.pdf" >Download Here</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ai/">AI</a>
+        
+            <a href="/tags/rpa/">RPA</a>
+        
+            <a href="/tags/python/">Python</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/financial-text-summarization/">
+        
+        
+            <div class="article-image">
+                <img src="/p/financial-text-summarization/textsummarization.5b4c9ec3c9063529b8b264b9c7477990_hu_7e9cccba36366a1b.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Financial Text Summarization"
+                        
+                        data-hash="md5-W0yew8kGNSm4smS5x0d5kA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Financial Text Summarization</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/leasing-luxury-database-platform/">
+        
+        
+            <div class="article-image">
+                <img src="/p/leasing-luxury-database-platform/database3.9a388798966f92023cb4bee04bff0171_hu_248fdeece824ce26.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Leasing Luxury Database Platform"
+                        
+                        data-hash="md5-mjiHmJZvkgI8tL7gS/8BcQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Leasing Luxury Database Platform</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/mbti-classification/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mbti-classification/mbtiprediction.0f00022e8d9c4a56c5103e07cacd4e67_hu_18e77641a90b9587.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post MBTI Classification"
+                        
+                        data-hash="md5-DwACLo2cSlbFED4Hys1OZw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MBTI Classification</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/charity-donation-prediction-with-machine-learning/">
+        
+        
+            <div class="article-image">
+                <img src="/p/charity-donation-prediction-with-machine-learning/charity1.a7386a87d96a1ae9bc4447a33c965b15_hu_f00caf63d2d13f84.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Charity Donation Prediction with Machine Learning"
+                        
+                        data-hash="md5-pzhqh9lqGum8REejPJZbFQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Charity Donation Prediction with Machine Learning</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/fpd-metrics-dashboard-project-management-plan/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fpd-metrics-dashboard-project-management-plan/pm1.13c9bb3b23d5c520f7d8b17444458d1b_hu_55dfc625a95af04b.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post FPD Metrics Dashboard Project Management Plan"
+                        
+                        data-hash="md5-E8m7OyPVxSD32LF0REWNGw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FPD Metrics Dashboard Project Management Plan</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Vicki Ye
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
